@@ -1,33 +1,41 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer'); 
 const fs = require('fs'); 
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [];
 
 inquirer
   .prompt([
+    { 
+      type: 'input',
+      message: 'What is your name?',
+      name: 'name',
+    },
     {
       type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
+      message: 'What languages do you know?',
+      name: 'language',
     },
     {
-      type: 'password',
-      message: 'What is your password?',
-      name: 'password',
-    },
-    {
-      type: 'password',
-      message: 'Re-enter password to confirm:',
-      name: 'confirm',
+      type: 'input',
+      message: 'What is your preffered method of communication?',
+      name: 'communication',
     },
   ])
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
-  );
+  .then((response) => {
+    fs.writeFile("read.txt", JSON.stringify(response, null, 2), (err) => {
+      if(err) {
+        console.log(err)
+      }else{
+        console.log("Success write to file!")
+      }
+    })
+  });
+
+
+
   
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
