@@ -9,7 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "inquire": "^0.4.8",
-    "inquirer": "^6.3.1"
+    "inquirer": "^8.2.4"
   },
   "keywords": [],
   "description": ""
