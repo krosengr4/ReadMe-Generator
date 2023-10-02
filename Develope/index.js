@@ -25,7 +25,7 @@ inquirer
     },
   ])
   .then((response) => {
-    fs.writeFile("read.txt", JSON.stringify(response, null, 2), (err) => {
+    fs.writeFile("ReadMe.md", JSON.stringify(response, null, 2), (err) => {
       if(err) {
         console.log(err)
       }else{
@@ -45,4 +45,3 @@ function init() {}
 
 // Function call to initialize app
 init();
-
