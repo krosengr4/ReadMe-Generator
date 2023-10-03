@@ -5,75 +5,96 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const { title } = require('process');
 
+// Title, Table of contents, Description, Installation, Usage, License, Contributing, Tests, Questions
 
-const generateReadMe = ({Title, Description1, Description2, Contents, Installation, Usage, Screenshots, ssName, Credits}) =>
-`# ${Title} 
-## Description
-${Description1} ${Description2}
+const generateReadMe = ({title, description, installation, usage, License, images, credits, tests, github, email}) =>
+`# ${title} 
 ## Table of Contents: 
-${Contents} 
-## How to Install: 
-${Installation}
-## How to Use: 
-${Usage}
-## Screenshots
-![image](${Screenshots})
-## Credits
-${Credits}`;
+[Description](#description) | [Installation](#installation) | [Usage](#usage) | [Contributing](#contributing) | [Tests](#tests) | [License](#license) | [Questions](#questions)
+
+## Description
+${description}
+
+## Installation
+${installation}
+
+## How to Use
+${usage}
+
+## Images
+![image](${images})
+
+## Contributing
+${credits}
+
+## Tests
+${tests}
+
+## License
+
+## Questions
+If you have any questions, reach out to me at ${email} \n
+Here is the link to my Github Profile: https://github.com/${github}`;
 
 // TODO: Create an array of questions for user input
-const questions = [
+const questionsArr = [
 'What is the Title of your Project?', 
-'What was the motivation to build your project?', 
-'What problem does it solve?', 
-'If your README is long, include a table of contents. ie (Descritption, Installation, Usage, Credits)',
-'What are the steps required to install your project?',
-'Provide instructions for how to use the application', 
-'Provide a URL for any Screenshots:',
-'List the collaborators you have worked with:',
+'Please provide a description of your project explaining the what, why, and how:', 
+'Please provide the steps required to install your project?',
+'Please provide instructions for how to use the application', 
+'Please provide the URL for any images you would like to use:',
+'Please provide any collaborators you have worked with:',
+'Please provide tests for your project and examples how to run them:',
+'Please provide your github username: ',
+'Please provide your Email address: '
 ];
 
 inquirer.prompt([
     { 
       type: 'input',
-      name: 'Title',
-      message: questions[0],
+      name: 'title',
+      message: questionsArr[0],
     }, 
     {
       type: 'input',
-      name: 'Description1',
-      message: questions[1],
+      name: 'description',
+      message: questionsArr[1],
     },
     {
       type: 'input',
-      name: 'Description2',
-      message: questions[2],
+      name: 'installation',
+      message: questionsArr[2],
     },
     {
       type: 'input',
-      name: 'Contents',
-      message: questions[3],
+      name: 'usage',
+      message: questionsArr[3],
     }, 
     {
       type: 'input',
-      name: 'Installation',
-      message: questions[4],
-    },
-    {
-      type: 'input',
-      name: 'Usage',
-      message: questions[5],
+      name: 'images',
+      message:questionsArr[4],
     }, 
     {
       type: 'input',
-      name: 'Screenshots',
-      message:questions[6],
-    }, 
+      name: 'credits',
+      message: questionsArr[5],
+    },
     {
       type: 'input',
-      name: 'Credits',
-      message: questions[7],
+      name: 'tests',
+      message: questionsArr[6],
     },
+    {
+      type: 'input',
+      name: 'github',
+      message: questionsArr[7],
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: questionsArr[8],
+    }
   ])
   .then((response) => {
     const readMeContent = generateReadMe(response);
@@ -82,6 +103,10 @@ inquirer.prompt([
     err ? console.log(err) : console.log('Successfully created your Read Me!')
     );
   });
+
+
+
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
