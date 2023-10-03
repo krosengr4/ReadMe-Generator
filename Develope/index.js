@@ -1,7 +1,8 @@
 // Include packages needed for this application
 const inquirer = require('inquirer'); 
 const fs = require('fs'); 
-const generateMarkdown = require('./utils/generateMarkdown');
+
+const generateMarkdown = require('./utils/generateMarkdown');//<--- Gets functions from "generateMarkdown.js" file.
 
 const licenses = ['No License', 'MIT', 'BSD', 'GPL', 'Apache']; //<--- Array for the different licenses a user can select. 
 
@@ -19,6 +20,7 @@ const questionsArr=[
 'Please provide your Email address: '
 ];
 
+// Array of user prompts using the questions in "questionsArr".
 const questions = [
     { 
       type: 'input',
@@ -73,7 +75,7 @@ const questions = [
     }
   ];
 
-  // This function initializes the app and asks the user questions when node index.js is run in command line.
+  // This function initializes the app and asks the user questions when called.
   function init() {
   inquirer.prompt(questions)
   // This function will write the data to a README file

@@ -1,6 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-
+// This function returns a badge based on what license the user selects. 
 function renderLicenseBadge(license) {
   let badge = '';
 
@@ -11,9 +9,7 @@ function renderLicenseBadge(license) {
   
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-
+// This function returns a link of the license that the user selects. Uses switch function.
 function renderLicenseLink(license) {
   let licLink;
 
@@ -40,7 +36,7 @@ function renderLicenseLink(license) {
 
 
 // Title, Table of contents, Description, Installation, Usage, License, Contributing, Tests, Questions
-// Function to generate the readme file format. 
+// This function generates how the readme file will look.
 const generateMarkdown = ({title, description, installation, usage, images, credits, tests, license, email, github}) =>
 
 `# ${title} \n 
@@ -79,8 +75,5 @@ For more information about the license, please go here: ${renderLicenseLink(lice
 ## Questions
 If you have any questions, email me at ${email} \n
 Here is the link to my Github Profile: https://github.com/${github}`;
-  
-// // return `# ${data.title}
-// // `;
 
 module.exports = generateMarkdown;
