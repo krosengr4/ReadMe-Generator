@@ -5,6 +5,22 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const { title } = require('process');
 
+
+const generateReadMe = ({Title, Description1, Description2, Contents, Installation, Usage, Screenshots, ssName, Credits}) =>
+`# ${Title} 
+## Description
+${Description1} ${Description2}
+## Table of Contents: 
+${Contents} 
+## How to Install: 
+${Installation}
+## How to Use: 
+${Usage}
+## Screenshots
+![image](${Screenshots})
+## Credits
+${Credits}`;
+
 // TODO: Create an array of questions for user input
 const questions = [
 'What is the Title of your Project?', 
@@ -13,7 +29,7 @@ const questions = [
 'If your README is long, include a table of contents. ie (Descritption, Installation, Usage, Credits)',
 'What are the steps required to install your project?',
 'Provide instructions for how to use the application', 
-'Provide any screenshots:',
+'Provide a URL for any Screenshots:',
 'List the collaborators you have worked with:',
 ];
 
@@ -58,27 +74,15 @@ inquirer.prompt([
       name: 'Credits',
       message: questions[7],
     },
-  ]);
+  ])
+  .then((response) => {
+    const readMeContent = generateReadMe(response);
 
-  // const generateReadMe = ({Title, Description1, Description2, Description3, Contents, Installation, Usage, Screenshots, Credits}) =>
+    fs.writeFile('ReadMe.md', readMeContent, (err) =>
+    err ? console.log(err) : console.log('Successfully created your Read Me!')
+    );
+  });
 
-
-
-
-
-  // .then((response) => {
-  //   fs.writeFile("ReadMe.md", JSON.stringify(response, null, 2), (err) => {
-  //     if(err) {
-  //       console.log(err)
-  //     }else{
-  //       console.log("Success write to file!")
-  //     }
-  //   })
-  // });
-
-
-
-  
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
