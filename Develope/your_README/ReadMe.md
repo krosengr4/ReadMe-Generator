@@ -1,4 +1,4 @@
-# Weather Dashboard 
+# Read Me Generator 
  
 ![License Badge](https://img.shields.io/badge/License-MIT-blue.svg)
 
@@ -19,13 +19,13 @@
 
 
 ## Description
-Weather dashboard is an app to get the current weather conditions as well a five day forecast for a specific city.
+Generates a professional ReadMe.md for a project using the terminal
 
 ## Installation
-Just visit the website!
+
 
 ## How to Use
-Type in a city name or choose from previous cities you have visited. 
+
 
 ## Images
 ![image]()

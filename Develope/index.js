@@ -81,8 +81,9 @@ const questions = [
   // This function will write the data to a README file
   .then((response) => {
     const readMeContent = generateMarkdown(response);
+    const fileName = './your_README/README.md';
 
-    fs.writeFile('ReadMe.md', readMeContent, (err) =>
+    fs.writeFile(fileName, readMeContent, (err) =>
     err ? console.log(err) : console.log('Successfully created your Read Me!')
     );
   });
