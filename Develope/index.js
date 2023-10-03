@@ -1,55 +1,25 @@
-// TODO: Include packages needed for this application
-
+// Include packages needed for this application
 const inquirer = require('inquirer'); 
 const fs = require('fs'); 
 const generateMarkdown = require('./utils/generateMarkdown');
-const { title } = require('process');
 
-// Title, Table of contents, Description, Installation, Usage, License, Contributing, Tests, Questions
+const licenses = ['No License', 'MIT', 'BSD', 'GPL', 'Apache']; //<--- Array for the different licenses a user can select. 
 
-const generateReadMe = ({title, description, installation, usage, License, images, credits, tests, github, email}) =>
-`# ${title} 
-## Table of Contents: 
-[Description](#description) | [Installation](#installation) | [Usage](#usage) | [Contributing](#contributing) | [Tests](#tests) | [License](#license) | [Questions](#questions)
-
-## Description
-${description}
-
-## Installation
-${installation}
-
-## How to Use
-${usage}
-
-## Images
-![image](${images})
-
-## Contributing
-${credits}
-
-## Tests
-${tests}
-
-## License
-
-## Questions
-If you have any questions, reach out to me at ${email} \n
-Here is the link to my Github Profile: https://github.com/${github}`;
-
-// TODO: Create an array of questions for user input
-const questionsArr = [
-'What is the Title of your Project?', 
+// Array of the questions that I ask the user
+const questionsArr=[
+'Please provide the Title of your Project?', 
 'Please provide a description of your project explaining the what, why, and how:', 
 'Please provide the steps required to install your project?',
 'Please provide instructions for how to use the application', 
 'Please provide the URL for any images you would like to use:',
 'Please provide any collaborators you have worked with:',
-'Please provide tests for your project and examples how to run them:',
+'Please provide any tests for your project and examples how to run them:',
+'Please select a license that you would like to use:',
 'Please provide your github username: ',
 'Please provide your Email address: '
 ];
 
-inquirer.prompt([
+const questions = [
     { 
       type: 'input',
       name: 'title',
@@ -86,33 +56,35 @@ inquirer.prompt([
       message: questionsArr[6],
     },
     {
+      type: 'list',
+      name: 'license',
+      message: questionsArr[7],
+      choices: licenses,
+    },
+    {
       type: 'input',
       name: 'github',
-      message: questionsArr[7],
+      message: questionsArr[8],
     },
     {
       type: 'input',
       name: 'email',
-      message: questionsArr[8],
+      message: questionsArr[9],
     }
-  ])
+  ];
+
+  // This function initializes the app and asks the user questions when node index.js is run in command line.
+  function init() {
+  inquirer.prompt(questions)
+  // This function will write the data to a README file
   .then((response) => {
-    const readMeContent = generateReadMe(response);
+    const readMeContent = generateMarkdown(response);
 
     fs.writeFile('ReadMe.md', readMeContent, (err) =>
     err ? console.log(err) : console.log('Successfully created your Read Me!')
     );
   });
+  };
 
-
-
-
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
+// Function call to initialize app when user types "node (root folder)" into CLI.
 init();
