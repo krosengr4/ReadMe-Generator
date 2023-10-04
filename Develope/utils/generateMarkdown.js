@@ -57,7 +57,7 @@ ${description}
 ## Installation
 ${installation}
 
-## How to Use
+## Usage
 ${usage}
 
 ## Images
@@ -73,7 +73,7 @@ ${tests}
 For more information about the license, please follow this link: ${renderLicenseLink(license)}
 
 ## Questions
-If you have any questions, email me at ${email} \n
-Here is the link to my Github Profile: https://github.com/${github}`;
+Here is the link to my Github Profile: https://github.com/${github} \n
+For any additional questions, email me at ${email}`; 
 
 module.exports = generateMarkdown;
