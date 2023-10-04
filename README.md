@@ -2,19 +2,14 @@
 ![License Badge](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Table of Contents
-[Description](#description) 
-
-[Installation](#installation) 
-
-[Usage](#usage) 
-
-[Video](#video)
-
-[License](#license)
-
-[Contributing](#contributing)
-
-[Questions](#questions)
+- [Description](#description) 
+- [Installation](#installation) 
+- [Usage](#usage) 
+- [Video](#video)
+- [Tests](#tests)
+- [License](#license)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
 ## Description
 The Read Me Generator application is a command line application that will generate a professional README.md file. The user
@@ -33,6 +28,9 @@ To Run the Application:
 
 ## Video
 [Walk through video]()
+
+## Tests
+No tests are provided. 
 
 ## License 
 For more information about the license, please follow this link: [MIT License](https://opensource.org/license/mit/)
