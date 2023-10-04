@@ -38,6 +38,7 @@ For more information about the license, please follow this link: [MIT License](h
 
 ## Contributing
 - [Link to the starter code](https://github.com/coding-boot-camp/potential-enigma)
+
 ### Please contribute to this project:
 - [Submit Bugs and Request Features you'd like to see Implemented](https://github.com/krosengr4/readme-generator/issues)
 
