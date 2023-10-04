@@ -1,6 +1,6 @@
-# Read Me Generator 
+#  
  
-![License Badge](https://img.shields.io/badge/License-MIT-blue.svg)
+
 
 ## Table of Contents: 
 [Description](#description) 
@@ -19,7 +19,7 @@
 
 
 ## Description
-Generates a professional ReadMe.md for a project using the terminal
+
 
 ## Installation
 
@@ -37,7 +37,7 @@ Generates a professional ReadMe.md for a project using the terminal
 
 
 ## License
-For more information about the license, please go here: https://opensource.org/license/mit/
+For more information about the license, please follow this link: No license
 
 ## Questions
 If you have any questions, email me at rosenkev4@gmail.com 

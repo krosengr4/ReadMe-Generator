@@ -27,7 +27,7 @@ function renderLicenseLink(license) {
       licLink = 'https://opensource.org/license/apache-2-0/';
       break;
     case 'No License':
-      licLink = '';
+      licLink = 'No license provided';
       break;
   }
   
@@ -70,7 +70,7 @@ ${credits}
 ${tests}
 
 ## License
-For more information about the license, please go here: ${renderLicenseLink(license)}
+For more information about the license, please follow this link: ${renderLicenseLink(license)}
 
 ## Questions
 If you have any questions, email me at ${email} \n
