@@ -1,6 +1,6 @@
-#  
+# Read Me Generator 
  
-
+![License Badge](https://img.shields.io/badge/License-GPL-blue.svg)
 
 ## Table of Contents: 
 [Description](#description) 
@@ -19,27 +19,27 @@
 
 
 ## Description
-
+test
 
 ## Installation
+test
 
-
-## How to Use
-
+## Usage
+test
 
 ## Images
-![image]()
+![image](test)
 
 ## Contributing
-
+test
 
 ## Tests
-
+test
 
 ## License
-For more information about the license, please follow this link: No license
+For more information about the license, please follow this link: https://www.gnu.org/licenses/gpl-3.0
 
 ## Questions
-If you have any questions, email me at rosenkev4@gmail.com 
+Here is the link to my Github Profile: https://github.com/test 
 
-Here is the link to my Github Profile: https://github.com/krosengr4
+For any additional questions, email me at test

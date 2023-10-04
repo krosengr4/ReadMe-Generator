@@ -6,7 +6,6 @@ function renderLicenseBadge(license) {
     badge = `![License Badge](https://img.shields.io/badge/License-${license}-blue.svg)`
   }
   return badge; 
-  
 };
 
 // This function returns a link of the license that the user selects. Uses switch function.
@@ -27,7 +26,7 @@ function renderLicenseLink(license) {
       licLink = 'https://opensource.org/license/apache-2-0/';
       break;
     case 'No License':
-      licLink = 'No license provided';
+      licLink = '';
       break;
   }
   
