@@ -1,4 +1,5 @@
 # Read Me Generator
+![License Badge](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Table of Contents
 [Description](#description) 
