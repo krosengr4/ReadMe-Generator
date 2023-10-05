@@ -36,7 +36,7 @@ function renderLicenseLink(license) {
 
 // Title, Table of contents, Description, Installation, Usage, License, Contributing, Tests, Questions
 // This function generates how the readme file will look.
-const generateMarkdown = ({title, description, installation, usage, images, credits, tests, license, email, github}) =>
+const generateMarkdown = ({title, description, installation, usage, images, credits, repoTitle, tests, license, email, github}) =>
 
 `# ${title} \n 
 ${renderLicenseBadge(license)}
@@ -64,6 +64,8 @@ ${usage}
 
 ## Contributing
 ${credits}
+### Please contribute to this project:
+- [Submit Bugs and Request Features you'd like to see Implemented](https://github.com/${github}/${repoTitle}/issues)
 
 ## Tests
 ${tests}

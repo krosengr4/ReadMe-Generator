@@ -9,13 +9,14 @@ const licenses = ['No License', 'MIT', 'BSD', 'GPL', 'Apache']; //<--- Array for
 // Array of the questions that I ask the user
 const questionsArr=[
 'Please provide the Title of your Project?', 
-'Please provide a description of your project explaining the what, why, and how:', 
+'Please provide a description of your project', 
 'Please provide the steps required to install your project?',
 'Please provide instructions for how to use the application', 
-'Please provide the URL for any images you would like to use:',
-'Please provide any collaborators you have worked with:',
+'Please provide the URL for a screenshot of your project:',
+'Please provide any collaborators you have worked with (if none, leave blank):',
 'Please provide any tests for your project and examples how to run them:',
 'Please select a license that you would like to use:',
+'Please provide the title of your repository:', 
 'Please provide your github username: ',
 'Please provide your Email address: '
 ];
@@ -65,13 +66,18 @@ const questions = [
     },
     {
       type: 'input',
+      name: 'repoTitle',
+      message: questionsArr[8]
+    },
+    {
+      type: 'input',
       name: 'github',
-      message: questionsArr[8],
+      message: questionsArr[9],
     },
     {
       type: 'input',
       name: 'email',
-      message: questionsArr[9],
+      message: questionsArr[10],
     }
   ];
 
