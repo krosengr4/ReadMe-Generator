@@ -94,6 +94,6 @@ const questions = [
     );
   });
   };
-
+  
 // Function call to initialize app when user types "node (root folder)" into CLI.
 init();
