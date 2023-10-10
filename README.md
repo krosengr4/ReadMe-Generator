@@ -16,17 +16,19 @@ The Read Me Generator application is a command line application that will genera
 just has to answer a couple of questions and that input is taken and formatted into a README.md file.
 
 ## Installation
-1) Clone the project to local computer.
-2) Use npm install to install files if necessary. 
+- To use the application, you need:
+1) Node
+2) Inquirer package 8.2.4
+3) npm init
 
 ## Usage
 To Run the Application:
-- After cloning the repository code:
-1) Open the integrated terminal to the ReadMe-Generator/Develope directory.
-2) In the integrated terminal, type "node index.js"
-3) In the integrated terminal, answer the questions that are asked.
-4) Your professional ReadMe.md file will appear in the "your_README" folder. (ReadMe-Generator/Develope/your_README)
-5) For any confusions, watch the walk through video below. 
+1) Clone the repository code to your local workspace. 
+2) Open the integrated terminal to the ReadMe-Generator/Develope directory.
+3) In the integrated terminal, type "node index.js"
+4) In the integrated terminal, answer the questions that are asked.
+5) Your professional ReadMe.md file will appear in the "your_README" folder. (ReadMe-Generator/Develope/your_README)
+6) For any confusions, watch the walk through video below. 
 
 ## Video
 [Walk through video](https://drive.google.com/file/d/1f9pVuyEjT8Ed6gtFVAaAM7EbfgG4EgEp/view)
