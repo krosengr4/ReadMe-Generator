@@ -90,7 +90,7 @@ const questions = [
     const fileName = './your_README/README.md';
 
     fs.writeFile(fileName, readMeContent, (err) =>
-    err ? console.log(err) : console.log('Successfully created your Read Me!')
+    err ? console.log(err) : console.log('Successfully created your Read Me in the file "/your_README"!')
     );
   });
   };
