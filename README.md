@@ -21,10 +21,12 @@ just has to answer a couple of questions and that input is taken and formatted i
 
 ## Usage
 To Run the Application:
-1) Open the integrated terminal and cd to ReadMe-Generator/Develope
+- After cloning the repository code:
+1) Open the integrated terminal to the ReadMe-Generator/Develope directory.
 2) In the integrated terminal, type "node index.js"
 3) In the integrated terminal, answer the questions that are asked.
-4) Your professional ReadMe.md file will appear in the "your_README" folder. ReadMe-Generator/Develope/your_README
+4) Your professional ReadMe.md file will appear in the "your_README" folder. (ReadMe-Generator/Develope/your_README)
+5) For any confusions, watch the walk through video below. 
 
 ## Video
 [Walk through video](https://drive.google.com/file/d/1f9pVuyEjT8Ed6gtFVAaAM7EbfgG4EgEp/view)
