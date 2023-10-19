@@ -33,6 +33,7 @@ function renderLicenseLink(license) {
   return licLink;
 };
 
+
 // Title, Table of contents, Description, Installation, Usage, License, Contributing, Tests, Questions
 // This function generates how the readme file will look.
 const generateMarkdown = ({title, description, installation, usage, images, credits, repoTitle, tests, license, email, github}) =>
